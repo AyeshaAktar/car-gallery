@@ -1,172 +1,58 @@
-const products = [
-  {
-    id: 1,
-    name: "HONDA WR-V",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint repellendus odio laborum doloremque temporibus asperiores quisquam provident! Deleniti voluptas sit iure omnis sed doloremque a iusto, vel cupiditate incidunt architecto.",
-    price: "700",
-    img: "https://h-h-auto.de/wp-content/uploads/2019/12/2F4O2Fk2.jpg",
-    features: {
-      bodyStyle: "Convertible",
-      door: "2",
-      engine: "3.4L Mid-Engine V6",
-      fuelType: "Gasoline",
-      fuelMileage: "20 City / 28 Hwy",
-      condition: "Brand New",
-      waeeanty: "3 Years Limited",
-    },
-  },
-  {
-    id: 2,
-    name: "HONDA WR-V",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint repellendus odio laborum doloremque temporibus asperiores quisquam provident! Deleniti voluptas sit iure omnis sed doloremque a iusto, vel cupiditate incidunt architecto.",
-    price: "700",
-    img: "https://h-h-auto.de/wp-content/uploads/2019/12/2F4O2Fk2.jpg",
-    features: {
-      bodyStyle: "Convertible",
-      door: "2",
-      engine: "3.4L Mid-Engine V6",
-      fuelType: "Gasoline",
-      fuelMileage: "20 City / 28 Hwy",
-      condition: "Brand New",
-      waeeanty: "3 Years Limited",
-    },
-  },
-  {
-    id: 3,
-    name: "HONDA WR-V",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint repellendus odio laborum doloremque temporibus asperiores quisquam provident! Deleniti voluptas sit iure omnis sed doloremque a iusto, vel cupiditate incidunt architecto.",
-    price: "700",
-    img: "https://h-h-auto.de/wp-content/uploads/2019/12/2F4O2Fk2.jpg",
-    features: {
-      bodyStyle: "Convertible",
-      door: "2",
-      engine: "3.4L Mid-Engine V6",
-      fuelType: "Gasoline",
-      fuelMileage: "20 City / 28 Hwy",
-      condition: "Brand New",
-      waeeanty: "3 Years Limited",
-    },
-  },
-  {
-    id: 4,
-    name: "HONDA WR-V",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint repellendus odio laborum doloremque temporibus asperiores quisquam provident! Deleniti voluptas sit iure omnis sed doloremque a iusto, vel cupiditate incidunt architecto.",
-    price: "700",
-    img: "https://h-h-auto.de/wp-content/uploads/2019/12/2F4O2Fk2.jpg",
-    features: {
-      bodyStyle: "Convertible",
-      door: "2",
-      engine: "3.4L Mid-Engine V6",
-      fuelType: "Gasoline",
-      fuelMileage: "20 City / 28 Hwy",
-      condition: "Brand New",
-      waeeanty: "3 Years Limited",
-    },
-  },
-  {
-    id: 5,
-    name: "HONDA WR-V",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint repellendus odio laborum doloremque temporibus asperiores quisquam provident! Deleniti voluptas sit iure omnis sed doloremque a iusto, vel cupiditate incidunt architecto.",
-    price: "700",
-    img: "https://h-h-auto.de/wp-content/uploads/2019/12/2F4O2Fk2.jpg",
-    features: {
-      bodyStyle: "Convertible",
-      door: "2",
-      engine: "3.4L Mid-Engine V6",
-      fuelType: "Gasoline",
-      fuelMileage: "20 City / 28 Hwy",
-      condition: "Brand New",
-      waeeanty: "3 Years Limited",
-    },
-  },
-  {
-    id: 6,
-    name: "HONDA WR-V",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint repellendus odio laborum doloremque temporibus asperiores quisquam provident! Deleniti voluptas sit iure omnis sed doloremque a iusto, vel cupiditate incidunt architecto.",
-    price: "700",
-    img: "https://h-h-auto.de/wp-content/uploads/2019/12/2F4O2Fk2.jpg",
-    features: {
-      bodyStyle: "Convertible",
-      door: "2",
-      engine: "3.4L Mid-Engine V6",
-      fuelType: "Gasoline",
-      fuelMileage: "20 City / 28 Hwy",
-      condition: "Brand New",
-      waeeanty: "3 Years Limited",
-    },
-  },
-  {
-    id: 7,
-    name: "HONDA WR-V",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint repellendus odio laborum doloremque temporibus asperiores quisquam provident! Deleniti voluptas sit iure omnis sed doloremque a iusto, vel cupiditate incidunt architecto.",
-    price: "700",
-    img: "https://h-h-auto.de/wp-content/uploads/2019/12/2F4O2Fk2.jpg",
-    features: {
-      bodyStyle: "Convertible",
-      door: "2",
-      engine: "3.4L Mid-Engine V6",
-      fuelType: "Gasoline",
-      fuelMileage: "20 City / 28 Hwy",
-      condition: "Brand New",
-      waeeanty: "3 Years Limited",
-    },
-  },
-  {
-    id: 8,
-    name: "HONDA WR-V",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint repellendus odio laborum doloremque temporibus asperiores quisquam provident! Deleniti voluptas sit iure omnis sed doloremque a iusto, vel cupiditate incidunt architecto.",
-    price: "700",
-    img: "https://h-h-auto.de/wp-content/uploads/2019/12/2F4O2Fk2.jpg",
-    features: {
-      bodyStyle: "Convertible",
-      door: "2",
-      engine: "3.4L Mid-Engine V6",
-      fuelType: "Gasoline",
-      fuelMileage: "20 City / 28 Hwy",
-      condition: "Brand New",
-      waeeanty: "3 Years Limited",
-    },
-  },
-  {
-    id: 9,
-    name: "HONDA WR-V",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint repellendus odio laborum doloremque temporibus asperiores quisquam provident! Deleniti voluptas sit iure omnis sed doloremque a iusto, vel cupiditate incidunt architecto.",
-    price: "700",
-    img: "https://h-h-auto.de/wp-content/uploads/2019/12/2F4O2Fk2.jpg",
-    features: {
-      bodyStyle: "Convertible",
-      door: "2",
-      engine: "3.4L Mid-Engine V6",
-      fuelType: "Gasoline",
-      fuelMileage: "20 City / 28 Hwy",
-      condition: "Brand New",
-      waeeanty: "3 Years Limited",
-    },
-  },
-  {
-    id: 10,
-    name: "HONDA WR-V",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint repellendus odio laborum doloremque temporibus asperiores quisquam provident! Deleniti voluptas sit iure omnis sed doloremque a iusto, vel cupiditate incidunt architecto.",
-    price: "700",
-    img: "https://h-h-auto.de/wp-content/uploads/2019/12/2F4O2Fk2.jpg",
-    features: {
-      bodyStyle: "Convertible",
-      door: "2",
-      engine: "3.4L Mid-Engine V6",
-      fuelType: "Gasoline",
-      fuelMileage: "20 City / 28 Hwy",
-      condition: "Brand New",
-      waeeanty: "3 Years Limited",
-    },
-  },
-];
+import React from "react";
+import "./Footer.css";
+import { FaFacebookF } from "react-icons/fa";
+import { AiOutlineTwitter } from "react-icons/ai";
+import { BsYoutube } from "react-icons/bs";
+
+const Footer = () => {
+  return (
+    <div>
+      <div className="footer py-2 mt-5">
+        <div className="d-flex justify-content-around ">
+          <div>
+            <h5 className="mx-2">Contact</h5>
+            <p className="mx-2">
+              Phone <br /> 17871234567
+            </p>
+            <p className="mx-2">
+              Email <br /> melody123@gmail.com
+            </p>
+            <p className="mx-2">
+              Emergency <br /> melody123@gmail.com
+            </p>
+          </div>
+          <div>
+            <h5 className="mx-2">Support</h5>
+            <p className="mx-2">Online Support</p>
+            <p className="mx-2">Free Consultancy</p>
+            <p className="mx-2">24/7 Service</p>
+            <p className="mx-2">Make Call</p>
+            <p className="mx-2">Contact Support</p>
+          </div>
+          <div>
+            <h5 className="mx-2">Opening Hours</h5>
+            <p className="mx-2">Sun: 09:00 AM - 10:00PM</p>
+            <p className="mx-2">Mon: 09:00 AM - 10:00PM</p>
+            <p className="mx-2">Tue: 09:00 AM - 10:00PM</p>
+            <p className="mx-2">Wed: 09:00 AM - 10:00PM</p>
+            <p className="mx-2">Thu: 09:00 AM - 10:00PM</p>
+          </div>
+        </div>
+        <div className="social-icon d-flex gap-2 justify-content-center ">
+          <button className="btn btn-light rounded-circle">
+            <FaFacebookF />
+          </button>
+          <button className="btn btn-light rounded-circle">
+            <AiOutlineTwitter />
+          </button>
+          <button className="btn btn-light rounded-circle">
+            <BsYoutube />
+          </button>
+        </div>
+        <p>copyright &copy; 2021</p>
+      </div>
+    </div>
+  );
+};
+
+export default Footer;
