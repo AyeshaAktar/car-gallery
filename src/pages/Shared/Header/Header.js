@@ -6,7 +6,7 @@ import { AuthContext } from "../../../context/AuthProvider";
 const Header = () => {
   const [loginUser, setLoginUser] = useContext(AuthContext);
 
-  const handleLogout = () => {
+  const handleSignOut = () => {
     const auth = getAuth();
     signOut(auth)
       .then(() => {
@@ -47,13 +47,22 @@ const Header = () => {
             <Link className="nav-link text-white" to="/addProduct">
               Add New Product
             </Link>
+            <Link className="nav-link text-white" to="/manageOrder">
+              Manage Order
+            </Link>
+            <Link className="nav-link text-white" to="/manageProducts">
+              Manage Products
+            </Link>
+            <Link className="nav-link text-white" to="/myOrder">
+              My Order
+            </Link>
             {loginUser?.email ? (
               <Link
-                onClick={handleLogout}
+                onClick={handleSignOut}
                 className="nav-link text-white"
                 to="#"
               >
-                {loginUser?.displayName} Log Out
+                {loginUser?.displayName} Sign Out
               </Link>
             ) : (
               <Link className="nav-link text-white" to="/signIn">

@@ -7,7 +7,7 @@ const MoreItem = (props) => {
     <div class="card mb-3 p-0">
       <div class="row g-0">
         <div class="col-md-4">
-          <img src={img} class="img-fluid rounded-start" alt="..." />
+          <img src={img} class="img-fluid rounded-start h-100" alt="..." />
         </div>
         <div class="col-md-8 text-start">
           <div class="card-body">

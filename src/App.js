@@ -11,6 +11,10 @@ import AddProduct from "./pages/AddProduct/AddProduct";
 import SignIn from "./pages/Login/SignIn/SignIn";
 import AuthProvider from "./context/AuthProvider";
 import SignUp from "./pages/Login/SignUp/SignUp";
+import NotFound from "./pages/NotFound/NotFound";
+import ManageOrder from "./pages/ManageOrder/ManageOrder";
+import MyOrder from "./pages/MyOrder/MyOrder";
+import ManageProducts from "./pages/ManageProducts/ManageProducts";
 
 function App() {
   return (
@@ -34,11 +38,23 @@ function App() {
             <Route path="/addProduct">
               <AddProduct></AddProduct>
             </Route>
+            <Route path="/manageOrder">
+              <ManageOrder></ManageOrder>
+            </Route>
+            <Route path="/manageProducts">
+              <ManageProducts></ManageProducts>
+            </Route>
+            <Route path="/myOrder">
+              <MyOrder></MyOrder>
+            </Route>
             <Route path="/signIn">
               <SignIn></SignIn>
             </Route>
             <Route path="/signUp">
               <SignUp></SignUp>
+            </Route>
+            <Route path="/*">
+              <NotFound></NotFound>
             </Route>
           </Switch>
           <Footer></Footer>
