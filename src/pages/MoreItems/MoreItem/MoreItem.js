@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const MoreItem = (props) => {
-  const { id, img, name, description, price } = props.product;
+  const { _id, img, name, description, price } = props.product;
   return (
     <div class="card mb-3 p-0">
       <div class="row g-0">
@@ -14,7 +14,7 @@ const MoreItem = (props) => {
             <h5 class="card-title">{name}</h5>
             <p class="card-text">{description}</p>
             <h6>Price: ${price}</h6>
-            <Link to={`/details/${id}`}>
+            <Link to={`/details/${_id}`}>
               <button type="button" className="btn details">
                 Details
               </button>

@@ -2,6 +2,7 @@ import { getAuth, signOut } from "@firebase/auth";
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../context/AuthProvider";
+import "./Header.css";
 
 const Header = () => {
   const [loginUser, setLoginUser] = useContext(AuthContext);
@@ -17,10 +18,10 @@ const Header = () => {
       });
   };
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-dark sticky-top">
+    <nav className="navbar navbar-expand-lg navbar-light sticky-top navbar-bg">
       <div className="container-fluid">
-        <Link className="navbar-brand text-white fw-bold" to="/">
-          Car
+        <Link className="navbar-brand text-white fw-bold fst-italic" to="/">
+          Car-Gallery
         </Link>
         <button
           className="navbar-toggler"
@@ -41,31 +42,31 @@ const Header = () => {
             <Link className="nav-link active text-white" to="/home">
               Home
             </Link>
-            <Link className="nav-link text-white" to="/moreItems">
+            <Link className="nav-link active text-white" to="/moreItems">
               More Items
             </Link>
-            <Link className="nav-link text-white" to="/addProduct">
+            <Link className="nav-link active text-white" to="/addProduct">
               Add New Product
             </Link>
-            <Link className="nav-link text-white" to="/manageOrder">
+            <Link className="nav-link active text-white" to="/manageOrder">
               Manage Order
             </Link>
-            <Link className="nav-link text-white" to="/manageProducts">
+            <Link className="nav-link active text-white" to="/manageProducts">
               Manage Products
             </Link>
-            <Link className="nav-link text-white" to="/myOrder">
+            <Link className="nav-link active text-white" to="/myOrder">
               My Order
             </Link>
             {loginUser?.email ? (
               <Link
                 onClick={handleSignOut}
-                className="nav-link text-white"
+                className="nav-link active text-white"
                 to="#"
               >
                 {loginUser?.displayName} Sign Out
               </Link>
             ) : (
-              <Link className="nav-link text-white" to="/signIn">
+              <Link className="nav-link  active text-white" to="/signIn">
                 Sign In
               </Link>
             )}

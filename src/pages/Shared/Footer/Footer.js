@@ -6,39 +6,34 @@ import { BsYoutube } from "react-icons/bs";
 
 const Footer = () => {
   return (
-    <div>
-      <div className="footer py-2 mt-5">
-        <div className="d-flex justify-content-around ">
-          <div>
-            <h5 className="mx-2">Contact</h5>
-            <p className="mx-2">
-              Phone <br /> 17871234567
-            </p>
-            <p className="mx-2">
-              Email <br /> melody123@gmail.com
-            </p>
-            <p className="mx-2">
-              Emergency <br /> melody123@gmail.com
-            </p>
+    <div className="footer">
+      <div className="container py-4">
+        <div className="row">
+          <div className="col-md-6">
+            <h5 className="mb-3">Contact</h5>
+            <div className="row">
+              <div className="col-md-6">
+                <p className="mx-2">
+                  Phone <br /> 17871234567
+                </p>
+              </div>
+              <div className="col-md-6">
+                <p className="mx-2">
+                  Email <br /> cargallery123@gmail.com
+                </p>
+              </div>
+            </div>
           </div>
-          <div>
-            <h5 className="mx-2">Support</h5>
-            <p className="mx-2">Online Support</p>
-            <p className="mx-2">Free Consultancy</p>
-            <p className="mx-2">24/7 Service</p>
-            <p className="mx-2">Make Call</p>
-            <p className="mx-2">Contact Support</p>
-          </div>
-          <div>
-            <h5 className="mx-2">Opening Hours</h5>
-            <p className="mx-2">Sun: 09:00 AM - 10:00PM</p>
-            <p className="mx-2">Mon: 09:00 AM - 10:00PM</p>
-            <p className="mx-2">Tue: 09:00 AM - 10:00PM</p>
-            <p className="mx-2">Wed: 09:00 AM - 10:00PM</p>
-            <p className="mx-2">Thu: 09:00 AM - 10:00PM</p>
+          <div className="col-md-6">
+            <div className="d-flex justify-content-center align-items-center">
+              <p className="mx-2">About Us</p>
+              <p className="mx-2">Featured</p>
+              <p className="mx-2">Latest News</p>
+            </div>
           </div>
         </div>
-        <div className="social-icon d-flex gap-2 justify-content-center ">
+
+        <div className="social-icon d-flex gap-2 justify-content-center my-3">
           <button className="btn btn-light rounded-circle">
             <FaFacebookF />
           </button>
@@ -49,6 +44,7 @@ const Footer = () => {
             <BsYoutube />
           </button>
         </div>
+
         <p>copyright &copy; 2021</p>
       </div>
     </div>

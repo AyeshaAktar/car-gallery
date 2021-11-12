@@ -1,13 +1,20 @@
 import { createUserWithEmailAndPassword, getAuth } from "@firebase/auth";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { useHistory, useLocation } from "react-router";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../context/AuthProvider";
 
 const SignUp = () => {
+  const [loginUser, setLoginUser] = useContext(AuthContext);
   const [user, setUser] = useState({
     name: "",
     email: "",
     password: "",
   });
+
+  const history = useHistory();
+  const location = useLocation();
+  let { from } = location.state || { from: { pathname: "/" } };
   const [success, setSuccess] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
   const getInputValue = (e) => {
@@ -22,7 +29,9 @@ const SignUp = () => {
       createUserWithEmailAndPassword(auth, user.email, user.password)
         .then((userCredential) => {
           const user = userCredential.user;
+          setLoginUser(user);
           setSuccess("Signup success");
+          history.replace(from);
           setErrorMsg("");
         })
         .catch((error) => {

@@ -9,12 +9,15 @@ import Details from "./pages/Details/Details";
 import Footer from "./pages/Shared/Footer/Footer";
 import AddProduct from "./pages/AddProduct/AddProduct";
 import SignIn from "./pages/Login/SignIn/SignIn";
-import AuthProvider from "./context/AuthProvider";
+import AuthProvider, { AuthContext } from "./context/AuthProvider";
 import SignUp from "./pages/Login/SignUp/SignUp";
 import NotFound from "./pages/NotFound/NotFound";
 import ManageOrder from "./pages/ManageOrder/ManageOrder";
 import MyOrder from "./pages/MyOrder/MyOrder";
 import ManageProducts from "./pages/ManageProducts/ManageProducts";
+import Order from "./pages/Order/Order";
+import PrivateRoute from "./pages/Login/PrivateRoute/PrivateRoute";
+import ReviewPage from "./pages/ReviewPage/ReviewPage";
 
 function App() {
   return (
@@ -32,9 +35,12 @@ function App() {
             <Route path="/moreItems">
               <MoreItems></MoreItems>
             </Route>
-            <Route path="/details/:id">
+            <PrivateRoute path="/details/:id">
               <Details></Details>
-            </Route>
+            </PrivateRoute>
+            <PrivateRoute path="/orderNow/:id">
+              <Order></Order>
+            </PrivateRoute>
             <Route path="/addProduct">
               <AddProduct></AddProduct>
             </Route>
@@ -53,6 +59,9 @@ function App() {
             <Route path="/signUp">
               <SignUp></SignUp>
             </Route>
+            <PrivateRoute path="/review">
+              <ReviewPage></ReviewPage>
+            </PrivateRoute>
             <Route path="/*">
               <NotFound></NotFound>
             </Route>

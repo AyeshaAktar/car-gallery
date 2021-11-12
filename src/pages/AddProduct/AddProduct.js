@@ -9,6 +9,7 @@ const AddProduct = () => {
       name,
       description,
       price,
+      img,
       bodyStyle,
       engine,
       fuelType,
@@ -20,6 +21,7 @@ const AddProduct = () => {
       name,
       description,
       price,
+      img,
       features: {
         bodyStyle,
         engine,
@@ -45,21 +47,21 @@ const AddProduct = () => {
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-2">
             <input
-              className="w-25"
-              {...register("name", { required: true, maxLength: 20 })}
+              className="w-50"
+              {...register("name", { required: true, maxLength: 50 })}
               placeholder="Name"
             />
           </div>
           <div className="mb-2">
             <textarea
-              className="w-25"
+              className="w-50"
               {...register("description")}
               placeholder="Description"
             />
           </div>
           <div className="mb-2">
             <input
-              className="w-25"
+              className="w-50"
               type="number"
               {...register("price")}
               placeholder="Price"
@@ -67,49 +69,49 @@ const AddProduct = () => {
           </div>
           <div className="mb-2">
             <input
-              className="w-25"
+              className="w-50"
               {...register("img")}
               placeholder="Image URL"
             />
           </div>
           <div className="mb-2">
             <input
-              className="w-25"
+              className="w-50"
               {...register("bodyStyle")}
               placeholder="Body Style"
             />
           </div>
           <div className="mb-2">
             <input
-              className="w-25"
+              className="w-50"
               {...register("engine")}
               placeholder="Engine"
             />
           </div>
           <div className="mb-2">
             <input
-              className="w-25"
+              className="w-50"
               {...register("fuelType")}
               placeholder="Fuel Type"
             />
           </div>
           <div className="mb-2">
             <input
-              className="w-25"
+              className="w-50"
               {...register("fuelMileage")}
               placeholder="Fuel Mileage"
             />
           </div>
           <div className="mb-2">
             <input
-              className="w-25"
+              className="w-50"
               {...register("condition")}
               placeholder="Condition"
             />
           </div>
           <div className="mb-2">
             <input
-              className="w-25"
+              className="w-50"
               {...register("warenty")}
               placeholder="Warenty"
             />

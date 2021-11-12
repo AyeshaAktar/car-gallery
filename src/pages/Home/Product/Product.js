@@ -3,18 +3,17 @@ import "./Product.css";
 import { Link } from "react-router-dom";
 
 const Product = (props) => {
-  const { id, img, name, description } = props.product;
+  const { _id, img, name, description } = props.product;
 
   return (
     <div className="col-md-4">
       <div className="card m-3 product-card shadow">
         <img src={img} className="card-img-top product-img" alt="..." />
         <div className="card-body text-start">
-          <h4>Id: {id}</h4>
           <h5 className="card-title">{name}</h5>
 
           <p className="card-text">{description.slice(0, 100)}...</p>
-          <Link to={`/details/${id}`}>
+          <Link to={`/details/${_id}`}>
             <button type="button" className="btn details">
               Details
             </button>
