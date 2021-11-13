@@ -1,4 +1,5 @@
 import React from "react";
+import { useLocation } from "react-router";
 import AddProduct from "../../AddProduct/AddProduct";
 
 import ManageOrder from "../../ManageOrder/ManageOrder";
@@ -11,7 +12,7 @@ import MakeAdmin from "../MakeAdmin/MakeAdmin";
 const DashbordPage = () => {
   return (
     <div>
-      <h2>Dashbord</h2>
+      <h2 className="my-5">Dashbord</h2>
       <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item" role="presentation">
           <button

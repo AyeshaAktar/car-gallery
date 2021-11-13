@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
+import "./MyOrder.css";
 import { AuthContext } from "../../context/AuthProvider";
 
 const MyOrder = () => {
@@ -15,9 +16,8 @@ const MyOrder = () => {
   console.log(orderList);
   // const handleCancle = (id) => {};
 
-  console.log(orderList);
   return (
-    <div className="mybooking">
+    <div className="mybooking my-order">
       <div className="container my-5">
         <h2 className="mb-5">Booking: {orderList.length}</h2>
         {orderList.map((order) => (

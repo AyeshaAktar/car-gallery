@@ -51,6 +51,7 @@ const ManageOrder = () => {
               </td>
               <td>
                 <button
+                  className="btn"
                   key={order._id}
                   onClick={() => handleDelete(order?._id)}
                 >

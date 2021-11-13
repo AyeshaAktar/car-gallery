@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../context/AuthProvider";
 import "./Header.css";
+import { FaCar } from "react-icons/fa";
 
 const Header = () => {
   const [loginUser, setLoginUser] = useContext(AuthContext);
@@ -21,7 +22,7 @@ const Header = () => {
     <nav className="navbar navbar-expand-lg navbar-light sticky-top navbar-bg">
       <div className="container-fluid">
         <Link className="navbar-brand text-white fw-bold fst-italic" to="/">
-          Car-Gallery
+          <FaCar /> Car-Gallery
         </Link>
         <button
           className="navbar-toggler"
