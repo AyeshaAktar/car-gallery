@@ -6,7 +6,7 @@ import tesla from "../../../images/latest-news/tesla.png";
 
 const LatestNews = () => {
   return (
-    <div className="container">
+    <div className="container my-5">
       <h2>Letest News</h2>
       <div class="row row-cols-1 row-cols-md-3 g-5 my-3">
         <div class="col">
@@ -14,7 +14,7 @@ const LatestNews = () => {
             <img src={lexus} class="card-img-top letest-news" alt="..." />
             <div class="card-body">
               <h3 class="card-title text-warning">Lexus RX350</h3>
-              <h6></h6>
+              <p>upcomming...</p>
             </div>
           </div>
         </div>
@@ -23,7 +23,7 @@ const LatestNews = () => {
             <img src={jeep} class="card-img-top letest-news" alt="..." />
             <div class="card-body">
               <h3 class="card-title text-warning">Jeep Wrangler</h3>
-              <h6></h6>
+              <p>upcomming...</p>
             </div>
           </div>
         </div>
@@ -32,7 +32,7 @@ const LatestNews = () => {
             <img src={tesla} class="card-img-top letest-news" alt="..." />
             <div class="card-body">
               <h3 class="card-title text-warning">Tesla Model Y</h3>
-              <h6></h6>
+              <p>upcomming...</p>
             </div>
           </div>
         </div>
