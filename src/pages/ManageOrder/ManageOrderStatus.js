@@ -9,11 +9,14 @@ const ManageOrderStatus = ({ status, orderId }) => {
     const updateStatus = data;
     const updateData = { ...updateStatus, orderId };
 
-    fetch("http://localhost:5000/updateStatus/" + orderId, {
-      method: "PATCH",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(updateData),
-    })
+    fetch(
+      "https://limitless-fortress-66405.herokuapp.com/updateStatus/" + orderId,
+      {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(updateData),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log("Updated");

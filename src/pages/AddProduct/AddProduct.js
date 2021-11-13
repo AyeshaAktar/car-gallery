@@ -32,12 +32,14 @@ const AddProduct = () => {
       },
     };
     console.log(pdData);
-    axios.post("http://localhost:5000/products", pdData).then((res) => {
-      if (res.data.insertedId) {
-        alert("add successfully");
-        reset();
-      }
-    });
+    axios
+      .post("https://limitless-fortress-66405.herokuapp.com/products", pdData)
+      .then((res) => {
+        if (res.data.insertedId) {
+          alert("add successfully");
+          reset();
+        }
+      });
   };
 
   return (

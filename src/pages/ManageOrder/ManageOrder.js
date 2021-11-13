@@ -7,13 +7,13 @@ const ManageOrder = () => {
   const [manageOrder, setManageOrder] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/orders")
+    fetch("https://limitless-fortress-66405.herokuapp.com/orders")
       .then((res) => res.json())
       .then((data) => setManageOrder(data));
   }, [manageOrder]);
 
   const handleDelete = (id) => {
-    const url = `http://localhost:5000/deleteOrder/${id}`;
+    const url = `https://limitless-fortress-66405.herokuapp.com/deleteOrder/${id}`;
     fetch(url, {
       method: "DELETE",
     })

@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { useHistory, useLocation } from "react-router";
+
 import { AuthContext } from "../../../context/AuthProvider";
 import AddProduct from "../../AddProduct/AddProduct";
 
@@ -15,7 +15,10 @@ const DashbordPage = () => {
   const [loginUser, setLoginUser] = useContext(AuthContext);
 
   useEffect(() => {
-    fetch("http://localhost:5000/admin?email=" + loginUser.email)
+    fetch(
+      "https://limitless-fortress-66405.herokuapp.com/admin?email=" +
+        loginUser.email
+    )
       .then((res) => res.json())
       .then((data) => setAdmin(data));
   }, []);

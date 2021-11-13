@@ -11,7 +11,7 @@ const Order = () => {
   const [loginUser, setLoginUser] = useContext(AuthContext);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/products/${id}`)
+    fetch(`https://limitless-fortress-66405.herokuapp.com/products/${id}`)
       .then((res) => res.json())
       .then((data) => setDetails(data));
   }, []);
@@ -35,15 +35,17 @@ const Order = () => {
       orderStatus: "pending",
     };
     console.log(orderData);
-    axios.post("http://localhost:5000/orders", orderData).then((res) => {
-      if (res.data.insertedId) {
-        alert(
-          `booking successfully. Please review this product ${history.push(
-            "/review"
-          )}`
-        );
-      }
-    });
+    axios
+      .post("https://limitless-fortress-66405.herokuapp.com/orders", orderData)
+      .then((res) => {
+        if (res.data.insertedId) {
+          alert(
+            `booking successfully. Please review this product ${history.push(
+              "/review"
+            )}`
+          );
+        }
+      });
   };
   return (
     <div>
@@ -85,6 +87,9 @@ const Order = () => {
 
               <input type="submit" value="Conform Order" />
             </form>
+            <Link to="/payment">
+              <button>Pay</button>
+            </Link>
           </div>
         </div>
       </div>

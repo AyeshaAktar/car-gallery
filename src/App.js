@@ -19,6 +19,7 @@ import Order from "./pages/Order/Order";
 import PrivateRoute from "./pages/Login/PrivateRoute/PrivateRoute";
 import ReviewPage from "./pages/ReviewPage/ReviewPage";
 import DashbordPage from "./pages/Dashbord/DashbordPage/DashbordPage";
+import Payment from "./pages/Payment/Payment";
 
 function App() {
   return (
@@ -35,6 +36,9 @@ function App() {
             </Route>
             <Route path="/moreItems">
               <MoreItems></MoreItems>
+            </Route>
+            <Route path="/payment">
+              <Payment></Payment>
             </Route>
             <PrivateRoute path="/dashbord">
               <DashbordPage></DashbordPage>

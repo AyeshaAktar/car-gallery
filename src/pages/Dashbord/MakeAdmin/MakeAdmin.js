@@ -6,12 +6,14 @@ import "./MakeAdmin.css";
 const MakeAdmin = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
-    axios.post("http://localhost:5000/admin", data).then((res) => {
-      if (res.data) {
-        alert("New Admin");
-        reset();
-      }
-    });
+    axios
+      .post("https://limitless-fortress-66405.herokuapp.com/admin", data)
+      .then((res) => {
+        if (res.data) {
+          alert("New Admin");
+          reset();
+        }
+      });
   };
   return (
     <div className="makeAdmin">

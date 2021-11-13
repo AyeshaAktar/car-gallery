@@ -46,20 +46,7 @@ const Header = () => {
             <Link className="nav-link active text-white" to="/moreItems">
               More Items
             </Link>
-            {/* <Link className="nav-link active text-white" to="/addProduct">
-              Add New Product
-            </Link> */}
-            {/* <Link className="nav-link active text-white" to="/manageOrder">
-              Manage Order
-            </Link> */}
-            {/* <Link className="nav-link active text-white" to="/manageProducts">
-              Manage Products
-            </Link> */}
-            {/* {loginUser?.email && (
-              <Link className="nav-link active text-white" to="/myOrder">
-                My Order
-              </Link>
-            )} */}
+
             {loginUser?.email && (
               <Link className="nav-link active text-white" to="/dashbord">
                 Dashboard
