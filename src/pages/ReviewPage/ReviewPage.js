@@ -10,7 +10,7 @@ const ReviewPage = () => {
     console.log(data);
     axios.post("http://localhost:5000/reviwes", data).then((res) => {
       if (res.data.insertedId) {
-        alert("add successfully");
+        alert("Review add successfully");
         reset();
       }
     });

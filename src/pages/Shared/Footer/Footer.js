@@ -6,7 +6,7 @@ import { BsYoutube } from "react-icons/bs";
 
 const Footer = () => {
   return (
-    <div className="footer">
+    <div className="footer mt-5">
       <div className="container py-4">
         <div className="row">
           <div className="col-md-6">

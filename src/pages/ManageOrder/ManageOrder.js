@@ -19,7 +19,9 @@ const ManageOrder = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log("delete successfully", data);
+        if (data) {
+          alert("Are You sure??");
+        }
       });
   };
   return (
